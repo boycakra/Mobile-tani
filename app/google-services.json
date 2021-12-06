@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "62735747556",
+    "project_id": "mobile-tani",
+    "storage_bucket": "mobile-tani.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62735747556:android:c4d8b6eb127f43aac29ff1",
+        "android_client_info": {
+          "package_name": "com.smallacademy.MobileTani"
+        },
+        "oauth_client": [
+          },
+        {
+          "client_id": "62735747556-6p9u5gngn11tp2q0tq1ngek3oa3ej6sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLCvKc3I2vSH6QALBoqGCYv5ipFfxtLFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62735747556-6p9u5gngn11tp2q0tq1ngek3oa3ej6sp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
