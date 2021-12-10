@@ -81,7 +81,7 @@ public class Login extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 Log.d("TAG", "onSuccess" + documentSnapshot.getData());
                 // Identify
-                if(documentSnapshot.getString("isadmin") !=null){
+                if(documentSnapshot.getString("isPetani") !=null){
                     startActivity(new Intent(getApplicationContext(),Admin.class));
                     finish();
                 }

@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,7 +29,7 @@ public class Register extends AppCompatActivity {
     boolean valid = true;
     FirebaseAuth fAuth;
     FirebaseFirestore fstore;
-
+    CheckBox isTeacherBox,isStudentbox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,30 @@ public class Register extends AppCompatActivity {
         registerBtn = findViewById(R.id.registerBtn);
         goToLogin = findViewById(R.id.gotoLogin);
 
+        isTeacherBox = findViewById(R.id.isTeacher);
+        isStudentbox =findViewById(R.id.isStudent);
+
+        //Condition check box
+        isStudentbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(compoundButton.isChecked()){
+                    isTeacherBox.setChecked(false);
+                }
+            }
+        });
+
+        isTeacherBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(compoundButton.isChecked()){
+                    isStudentbox.setChecked(false);
+                }
+            }
+        });
+
+
+
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +75,11 @@ public class Register extends AppCompatActivity {
                 checkField(email);
                 checkField(password);
                 checkField(phone);
+                //check box
+                if(!(isTeacherBox.isChecked()|| isStudentbox.isChecked())){
+                    Toast.makeText(Register.this, "Pilih Jenis Akun",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if(valid){
                     // start registraion
                     fAuth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
@@ -63,10 +94,19 @@ public class Register extends AppCompatActivity {
                             userInfo.put("Phonenumber",phone.getText().toString());
                             userInfo.put("password",password.getText().toString());
                             //spek
-                            userInfo.put("isadmin","1");
-                            df.set(userInfo);
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                            finish();
+                            if(isTeacherBox.isChecked()){
+                                userInfo.put("isPetani","1");
+                                df.set(userInfo);
+                                startActivity(new Intent(getApplicationContext(),Admin.class));
+                                finish();
+                            }
+                            if(isStudentbox.isChecked()){
+                                userInfo.put("isUser","0");
+                                df.set(userInfo);
+                                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                finish();
+                            }
+
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
