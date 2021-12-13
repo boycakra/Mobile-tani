@@ -16,9 +16,10 @@
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
         </activity>
+
         <activity android:name="com.smallacademy.MobileTani.Register" />
-        <activity android:name="com.smallacademy.MobileTani.MainActivity"/>
-        <activity android:name="com.smallacademy.MobileTani.Admin"/>
+        <activity android:name="com.smallacademy.MobileTani.Usertampilan"/>
+        <activity android:name="com.smallacademy.MobileTani.Petanitampilan"/>
 
     </application>
 

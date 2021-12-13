@@ -78,7 +78,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
 
             <CheckBox
-                android:id="@+id/isTeacher"
+                android:id="@+id/isFarmer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -88,14 +88,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/registerPhone" />
 
             <CheckBox
-                android:id="@+id/isStudent"
+                android:id="@+id/isUserpembeli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:text="Register as User"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/isTeacher"
+                app:layout_constraintStart_toEndOf="@+id/isFarmer"
                 app:layout_constraintTop_toBottomOf="@+id/registerPhone" />
 
             <Button
@@ -108,7 +108,7 @@
                 android:text="Create Account"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/isStudent" />
+                app:layout_constraintTop_toBottomOf="@+id/isUserpembeli" />
 
             <Button
                 android:id="@+id/gotoLogin"

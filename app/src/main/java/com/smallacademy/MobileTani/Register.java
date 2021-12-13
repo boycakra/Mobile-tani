@@ -29,7 +29,7 @@ public class Register extends AppCompatActivity {
     boolean valid = true;
     FirebaseAuth fAuth;
     FirebaseFirestore fstore;
-    CheckBox isTeacherBox,isStudentbox;
+    CheckBox isFarmer,isUserpembeli;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,24 +44,24 @@ public class Register extends AppCompatActivity {
         registerBtn = findViewById(R.id.registerBtn);
         goToLogin = findViewById(R.id.gotoLogin);
 
-        isTeacherBox = findViewById(R.id.isTeacher);
-        isStudentbox =findViewById(R.id.isStudent);
+        isFarmer = findViewById(R.id.isFarmer);
+        isUserpembeli =findViewById(R.id.isUserpembeli);
 
         //Condition check box
-        isStudentbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        isUserpembeli.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if(compoundButton.isChecked()){
-                    isTeacherBox.setChecked(false);
+                    isFarmer.setChecked(false);
                 }
             }
         });
 
-        isTeacherBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        isFarmer.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if(compoundButton.isChecked()){
-                    isStudentbox.setChecked(false);
+                    isUserpembeli.setChecked(false);
                 }
             }
         });
@@ -76,7 +76,7 @@ public class Register extends AppCompatActivity {
                 checkField(password);
                 checkField(phone);
                 //check box
-                if(!(isTeacherBox.isChecked()|| isStudentbox.isChecked())){
+                if(!(isFarmer.isChecked()|| isUserpembeli.isChecked())){
                     Toast.makeText(Register.this, "Pilih Jenis Akun",Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -94,16 +94,16 @@ public class Register extends AppCompatActivity {
                             userInfo.put("Phonenumber",phone.getText().toString());
                             userInfo.put("password",password.getText().toString());
                             //spek
-                            if(isTeacherBox.isChecked()){
+                            if(isFarmer.isChecked()){
                                 userInfo.put("isPetani","1");
                                 df.set(userInfo);
-                                startActivity(new Intent(getApplicationContext(),Admin.class));
+                                startActivity(new Intent(getApplicationContext(), Petanitampilan.class));
                                 finish();
                             }
-                            if(isStudentbox.isChecked()){
+                            if(isUserpembeli.isChecked()){
                                 userInfo.put("isUser","0");
                                 df.set(userInfo);
-                                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                startActivity(new Intent(getApplicationContext(), Usertampilan.class));
                                 finish();
                             }
 

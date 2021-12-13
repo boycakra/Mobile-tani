@@ -8,11 +8,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Admin  extends AppCompatActivity {
+public class Petanitampilan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_petani);
+        setContentView(R.layout.activity_petanimain);
     }
     public void logoutAdmin(View view){
         FirebaseAuth.getInstance().signOut();

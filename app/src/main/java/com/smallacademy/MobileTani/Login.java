@@ -19,6 +19,8 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Login extends AppCompatActivity {
     EditText email,password;
     Button loginBtn,gotoRegister;
@@ -54,7 +56,7 @@ public class Login extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull @org.jetbrains.annotations.NotNull Exception e) {
-
+                            Toast.makeText(Login.this,"Ada yang salah ",Toast.LENGTH_SHORT).show();;
                         }
                     });
 
@@ -82,11 +84,11 @@ public class Login extends AppCompatActivity {
                 Log.d("TAG", "onSuccess" + documentSnapshot.getData());
                 // Identify
                 if(documentSnapshot.getString("isPetani") !=null){
-                    startActivity(new Intent(getApplicationContext(),Admin.class));
+                    startActivity(new Intent(getApplicationContext(), Petanitampilan.class));
                     finish();
                 }
                 if(documentSnapshot.getString("isUser")!=null){
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Usertampilan.class));
                     finish();
                 }
             }
@@ -108,8 +110,27 @@ public class Login extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if(FirebaseAuth.getInstance().getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
+            DocumentReference df = FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    if(documentSnapshot.getString("isPetani") != null){
+                        startActivity(new Intent(getApplicationContext(), Petanitampilan.class));
+                        finish();
+                    }
+
+                    if(documentSnapshot.getString("isUser")!= null){
+                        startActivity(new Intent(getApplicationContext(), Usertampilan.class));
+                        finish();
+                    }
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull @NotNull Exception e) {
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(getApplicationContext(),Login.class));
+                }
+            });
         }
     }
 }
