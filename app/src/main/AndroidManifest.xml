@@ -21,6 +21,7 @@
         <activity android:name="com.smallacademy.MobileTani.Usertampilan"/>
         <activity android:name="com.smallacademy.MobileTani.Petanitampilan"/>
         <activity android:name="com.smallacademy.MobileTani.PersonalProfileTani"/>
+        <activity android:name="com.smallacademy.MobileTani.PersonalProfilUser"/>
 
     </application>
 

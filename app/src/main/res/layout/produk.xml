@@ -52,6 +52,54 @@
             android:id="@+id/tempatsite"
             android:textColor="@color/white">
         </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tempatsite">
+
+
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="bottom"
+            android:text="Rp"
+            android:textColor="@color/white"
+            android:textSize="14sp">
+
+        </TextView>
+            <TextView
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:text="longtitude"
+                android:id="@+id/longdivesite"
+                android:textColor="@color/white">
+            </TextView>
+
+            <TextView
+                android:id="@+id/latdivesite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="latitude"
+                android:textColor="@color/white"
+                android:visibility="invisible">
+            </TextView>
+            <TextView
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:text="Penjelasan"
+                android:id="@+id/deskripsiproduk"
+                android:textColor="@color/white">
+            </TextView>
+        </LinearLayout>
+
 
         <ImageView
             android:layout_width="match_parent"

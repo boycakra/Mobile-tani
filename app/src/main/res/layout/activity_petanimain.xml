@@ -100,14 +100,13 @@
         </LinearLayout>
 
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rycleview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
 
-            tools:itemCount="1"
+            tools:itemCount="4"
             tools:listitem="@layout/produk" />
 
         <LinearLayout

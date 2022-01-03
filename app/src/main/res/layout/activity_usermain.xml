@@ -62,6 +62,17 @@
         android:text="Search"
         android:textColor="@color/White"
         />
+    <EditText
+        android:id="@+id/usertext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilegambar"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="User"
+        android:textColor="#000000"
+        android:textSize="24sp" />
 </LinearLayout>
 
 
@@ -95,7 +106,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/textprodut"
@@ -138,14 +150,7 @@
 
 
 
-        <ImageView
-            android:id="@+id/search1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_weight="1"
-            android:background="@color/White"
-            android:src="@drawable/search" />
+
 
         <ImageView
             android:id="@+id/store1"
@@ -154,7 +159,7 @@
             android:layout_marginVertical="5dp"
             android:layout_weight="1"
             android:background="@color/White"
-            app:srcCompat="@drawable/store" />
+            app:srcCompat="@drawable/order" />
 
         <ImageView
             android:id="@+id/order1"
@@ -163,7 +168,7 @@
             android:layout_marginVertical="5dp"
             android:layout_weight="1"
             android:background="@color/White"
-            app:srcCompat="@drawable/order" />
+            app:srcCompat="@drawable/store" />
 
         <ImageView
             android:id="@+id/profil1"
@@ -172,7 +177,8 @@
             android:layout_marginVertical="5dp"
             android:layout_weight="1"
             android:background="@color/White"
-            app:srcCompat="@drawable/profile" />
+            app:srcCompat="@drawable/profile"
+            android:onClick="personalProfileuser"/>
 
     </LinearLayout>
 
