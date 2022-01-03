@@ -74,8 +74,8 @@
 
         <com.smarteist.autoimageslider.SliderView
             android:id="@+id/image_slider"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
             app:sliderAnimationDuration="2000"
             app:sliderAutoCycleDirection="right"
             app:sliderAutoCycleEnabled="true"
@@ -136,14 +136,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <ImageView
-            android:id="@+id/home1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_weight="1"
-            android:background="@color/White"
-            app:srcCompat="@drawable/home" />
+
 
         <ImageView
             android:id="@+id/search1"

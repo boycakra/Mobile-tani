@@ -20,6 +20,7 @@
         <activity android:name="com.smallacademy.MobileTani.Register" />
         <activity android:name="com.smallacademy.MobileTani.Usertampilan"/>
         <activity android:name="com.smallacademy.MobileTani.Petanitampilan"/>
+        <activity android:name="com.smallacademy.MobileTani.PersonalProfileTani"/>
 
     </application>
 
