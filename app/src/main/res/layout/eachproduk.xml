@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".petaniprodukinfo"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/kotak1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/apel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/textlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/textinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Label"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:justificationMode="inter_word">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginHorizontal="20dp"
+                    android:id="@+id/kotak2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:id="@+id/picgambar"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:srcCompat="@drawable/apel"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_marginTop="-5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:layout_marginHorizontal="20dp"
+                        android:id="@+id/textlayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:id="@+id/produk"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Label"
+                            android:textColor="@color/black"
+                            android:justificationMode="inter_word">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:lineSpacingExtra="4dp"
+                            android:textSize="20dp"
+                            android:id="@+id/Nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="nama"
+                            android:textColor="@color/black"
+                            android:justificationMode="inter_word"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:orientation="horizontal">
+                    <TextView
+                        android:lineSpacingExtra="4dp"
+                        android:textSize="16dp"
+                        android:id="@+id/jumlah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Jumlah "
+                        android:textColor="@color/black"
+                        android:justificationMode="inter_word"/>
+                        <EditText
+
+                            android:textSize="12dp"
+                            android:id="@+id/jmlha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Jumlah "
+                            android:textColor="@color/black"
+                            android:justificationMode="inter_word"/>
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:lineSpacingExtra="4dp"
+                            android:textSize="16dp"
+                            android:id="@+id/harga"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="harga "
+                            android:textColor="@color/black"
+                            android:justificationMode="inter_word"/>
+                        <EditText
+
+                            android:textSize="12dp"
+                            android:id="@+id/hargadatabase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="harga "
+                            android:textColor="@color/black"
+                            android:justificationMode="inter_word"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/textlayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:lineSpacingExtra="4dp"
+                                android:textSize="16dp"
+                                android:id="@+id/deskripsi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Deskripsi"
+                                android:textColor="@color/black"
+                                android:justificationMode="inter_word">
+                            </TextView>
+                        </ScrollView>
+                        <Button
+                            android:id="@+id/save"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="40dp"
+                            android:background="@drawable/ripple"
+                            android:text="buy"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

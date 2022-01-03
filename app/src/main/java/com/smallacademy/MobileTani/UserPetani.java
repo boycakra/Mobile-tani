@@ -11,12 +11,7 @@ public class UserPetani implements Serializable {
     private String Phonenumber;
     private String Housephone;
     private String picprofil;
-    private String Nama;
-    private String Deskripsi;
-    private Double Harga;
-    private Double jmlhbarang;
-    private String picbarang;
-    private String jenis;
+
 
     public UserPetani(){}
     public UserPetani(String name,String email, String Phonenumber) {
@@ -88,33 +83,6 @@ public class UserPetani implements Serializable {
         this.picprofil=  picprofil;
     }
 
-    public String getNama(){return Nama;}
-    public void  setNama(String Nama){
-        this.Nama= Nama;
-    }
-    public String getDeskripsi(){return  Deskripsi;}
-    public void setDeskripsi(String Desrkripsi){
-        this.Deskripsi= Desrkripsi;
-    }
-    public  String getPicbarang(){
-        return picbarang;
-    }
-    public void setPicbarang(String picbarang){
-        this.picbarang=  picbarang;
-    }
-    public Double getHarga(){return Harga;}
-    public void setHarga(double Harga){
-        this.Harga = Harga;
-    }
-    public Double getJmlhbarang(){return jmlhbarang;}
-    public void setJmlhbarang(double jmlhbarang){
-        this.jmlhbarang = jmlhbarang;
-    }
-    public  String getjenis(){
-        return jenis;
-    }
-    public void setjenis(String jenis){
-        this.jenis=  jenis;
-    }
+
 
 }

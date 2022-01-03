@@ -45,5 +45,7 @@ dependencies {
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    implementation 'com.firebaseui:firebase-ui-firestore:7.1.1'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
 
 }

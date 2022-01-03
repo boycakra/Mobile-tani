@@ -57,6 +57,15 @@
             android:text="Deskripsi"
             />
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:background="@color/White"
+            android:src="@drawable/calltoaction"
+            android:onClick="addbarang"
+            />
 
         <TextView
             android:id="@+id/logoutBtn"
@@ -102,31 +111,17 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rycleview"
+            android:paddingBottom="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
 
-            tools:itemCount="4"
-            tools:listitem="@layout/produk" />
+            tools:itemCount="1"
+            tools:listitem="@layout/produk"
+            />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
 
-                android:layout_marginBottom="50dp"
-                android:background="@color/White"
-                android:src="@drawable/calltoaction"
-
-                />
-
-        </LinearLayout>
 
 
     </LinearLayout>

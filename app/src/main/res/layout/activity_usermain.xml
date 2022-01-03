@@ -59,7 +59,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:text="Saldo"
         android:textColor="@color/White"
         />
     <EditText
@@ -125,8 +125,10 @@
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/seeall" />
 
+
         </LinearLayout>
-        <Button
+
+        <TextView
             android:id="@+id/logoutBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -138,6 +140,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
+
 
 
     <LinearLayout
