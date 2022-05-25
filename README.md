@@ -1,1 +1,2 @@
 #   Mobile Tani
+E-Commerce Mobile Tani adalah perangkat lunak yang dioperasikan melalui aplikasi mobile dengan koneksi internet untuk memfasilitasi proses jual beli hasil tani masyarakat di Indonesia agar lebih mudah. Pengembangan perangkat lunak ini disesuaikan dengan data kebutuhan yang ada. Petani menyiapkan hasil tani yang akan dijual yang kemudian pembeli dapat mencari dan menemukan hasil tani yang dibutuhkan oleh pembeli melalui perangkat lunak ini.
