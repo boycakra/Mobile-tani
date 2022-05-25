@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -27,8 +26,9 @@ public class Usertampilan extends AppCompatActivity {
             R.drawable.apel,
     };
 
-    private EditText FullName;
-    private TextView txt_more;
+    private TextView FullName;
+    private TextView saldo;
+
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     public static final String SHARED_PREFS = "sharedPrefs";
@@ -45,13 +45,15 @@ public class Usertampilan extends AppCompatActivity {
 
         SliderAdapter sliderAdapter = new SliderAdapter(images);
 
+
         sliderView.setSliderAdapter(sliderAdapter);
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         sliderView.startAutoCycle();
+        saldo= findViewById(R.id.saldouserdatabase);
         FullName = findViewById(R.id.usertext);
         getProfil();
-        Button logout = findViewById(R.id.logoutBtn);
+        TextView logout = findViewById(R.id.logoutBtn);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +73,9 @@ public class Usertampilan extends AppCompatActivity {
                 if(user.getFullName() != null){
                     FullName.setText("Welcome "+user.getFullName());
                     Log.i("Mario", String.valueOf(FullName));
+                }
+                if(user.getSaldo() != null){
+                    saldo.setText(user.getSaldo());
                 }
             }
         });
@@ -92,7 +97,49 @@ public class Usertampilan extends AppCompatActivity {
         String currentLanguage = sharedPreferences.getString(LANGUAGE, "En");
         return currentLanguage;
     }
+    public void pindah(View view) {
+        DocumentReference userRef = db.collection("Produk").document(FirebaseAuth.getInstance().getUid());
+        userRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                user = documentSnapshot.toObject(userpembeli.class);
+                Intent intent = new Intent(getApplicationContext(), allprodukuser.class);
+                startActivity(intent);
+            }
 
+        });
+    }
+    public void checkout(View view){
+        Intent intent = new Intent(getApplicationContext(),checkoutpembeli.class);
+        startActivity(intent);
+    }
+    public void topup(View view){
+        Intent intent = new Intent(getApplicationContext(),topupPembeli.class);
+        startActivity(intent);
+    }
+    public void Buah(View view) {
+        DocumentReference userRef = db.collection("Buah").document(FirebaseAuth.getInstance().getUid());
+        userRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                user = documentSnapshot.toObject(userpembeli.class);
+                Intent intent = new Intent(getApplicationContext(), allbuahuser.class);
+                startActivity(intent);
+            }
 
+        });
+    }
+    public void Sayur(View view) {
+        DocumentReference userRef = db.collection("Sayur").document(FirebaseAuth.getInstance().getUid());
+        userRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                user = documentSnapshot.toObject(userpembeli.class);
+                Intent intent = new Intent(getApplicationContext(), allsayuruser.class);
+                startActivity(intent);
+            }
+
+        });
+    }
 
 }

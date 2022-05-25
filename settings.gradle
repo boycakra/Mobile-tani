@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "UserRoles"
+rootProject.name = "Mobile-Tani"

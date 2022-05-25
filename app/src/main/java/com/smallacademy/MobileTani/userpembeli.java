@@ -11,6 +11,7 @@ public class userpembeli implements Serializable {
     private String Phonenumber;
     private String Housephone;
     private String picprofil;
+    private String Saldo;
 
     public userpembeli(){}
     public userpembeli(String name,String email, String Phonenumber) {
@@ -79,5 +80,11 @@ public class userpembeli implements Serializable {
     }
     public void setPicprofil(String picprofil){
         this.picprofil=  picprofil;
+    }
+    public  String getSaldo(){
+        return Saldo;
+    }
+    public void setSaldo(String Saldo){
+        this.Saldo=  Saldo;
     }
 }

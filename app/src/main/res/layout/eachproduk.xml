@@ -16,15 +16,14 @@
         <LinearLayout
             android:id="@+id/kotak1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:background="@color/green">
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/apel" />
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/tani" />
         </LinearLayout>
 
         <LinearLayout
@@ -75,105 +74,131 @@
             <LinearLayout
                 android:layout_marginTop="10dp"
                 android:orientation="vertical"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_marginTop="-5dp"
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
 
                     <LinearLayout
 
-                        android:layout_marginHorizontal="20dp"
                         android:id="@+id/textlayout1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp">
 
                         <TextView
-                            android:textSize="16dp"
                             android:id="@+id/produk"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:justificationMode="inter_word"
                             android:text="Label"
                             android:textColor="@color/black"
-                            android:justificationMode="inter_word">
-                        </TextView>
+                            android:textSize="16dp"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:layout_marginHorizontal="20dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
                         <TextView
-                            android:lineSpacingExtra="4dp"
-                            android:textSize="20dp"
                             android:id="@+id/Nama"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:justificationMode="inter_word"
+                            android:lineSpacingExtra="4dp"
                             android:text="nama"
                             android:textColor="@color/black"
-                            android:justificationMode="inter_word"/>
+                            android:textSize="20dp" />
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
                         android:orientation="horizontal">
-                    <TextView
-                        android:lineSpacingExtra="4dp"
-                        android:textSize="16dp"
-                        android:id="@+id/jumlah"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Jumlah "
-                        android:textColor="@color/black"
-                        android:justificationMode="inter_word"/>
-                        <EditText
 
-                            android:textSize="12dp"
+                        <TextView
+                            android:id="@+id/jumlah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:justificationMode="inter_word"
+                            android:lineSpacingExtra="4dp"
+                            android:text="Jumlah "
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+                        <TextView
+
                             android:id="@+id/jmlha"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:justificationMode="inter_word"
                             android:text="Jumlah "
                             android:textColor="@color/black"
-                            android:justificationMode="inter_word"/>
-                </LinearLayout>
+                            android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/dalamKg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:justificationMode="inter_word"
+                            android:lineSpacingExtra="4dp"
+                            android:text="Kg "
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
                         android:orientation="horizontal">
+
+
                         <TextView
-                            android:lineSpacingExtra="4dp"
-                            android:textSize="16dp"
                             android:id="@+id/harga"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="harga "
+                            android:justificationMode="inter_word"
+                            android:lineSpacingExtra="4dp"
+                            android:text="Harga "
                             android:textColor="@color/black"
-                            android:justificationMode="inter_word"/>
-                        <EditText
+                            android:textSize="16dp" />
 
-                            android:textSize="12dp"
+                        <TextView
+                            android:id="@+id/Rp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:justificationMode="inter_word"
+                            android:lineSpacingExtra="4dp"
+                            android:text="Rp. "
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+                        <TextView
+
                             android:id="@+id/hargadatabase"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:justificationMode="inter_word"
                             android:text="harga "
                             android:textColor="@color/black"
-                            android:justificationMode="inter_word"/>
+                            android:textSize="16dp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
 
                     <LinearLayout
                         android:layout_marginHorizontal="20dp"
@@ -206,7 +231,7 @@
                             android:layout_marginTop="30dp"
                             android:layout_marginBottom="40dp"
                             android:background="@drawable/ripple"
-                            android:text="buy"
+                            android:text="Edit"
                             android:textColor="@color/white" />
                     </LinearLayout>
 

@@ -14,108 +14,155 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/Profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#33907C"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="My Store"
-            android:textColor="@color/White"
-            android:textSize="30sp" />
-        <ImageButton
-            android:id="@+id/profilegambar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Profile"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@color/White"
 
-            android:src="@drawable/avatar2" />
-
-        <EditText
-            android:id="@+id/usertext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profilegambar"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_horizontal"
-            android:text="User"
-            android:textColor="#000000"
-            android:textSize="24sp" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/deskripsi"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:background="@color/White"
-            android:text="Deskripsi"
-            />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-
-            android:background="@color/White"
-            android:src="@drawable/calltoaction"
-            android:onClick="addbarang"
-            />
-
-        <TextView
-            android:id="@+id/logoutBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:background="@color/White"
-            android:onClick="logoutAdmin"
-            android:text="Logout" />
-
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/editstore"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginVertical="5dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/following"
-                android:onClick="personalProfile"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#33907C"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="My Store"
+                    android:textColor="@color/White"
+                    android:textSize="30sp" />
 
-            <ImageView
-                android:id="@+id/viewstore"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginVertical="5dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/follow" />
+                <ImageButton
+                    android:id="@+id/profilegambar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerInside"
+                    android:layout_below="@+id/Profile"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/White"
+
+                    android:src="@drawable/avatar2" />
+
+                <TextView
+                    android:id="@+id/usertext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profilegambar"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="User"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/deskripsi"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@color/White"
+                    android:text="Deskripsi"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/saldo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:justificationMode="inter_word"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Harga "
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/Rp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:justificationMode="inter_word"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Rp. "
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+
+                        android:id="@+id/saldodatabase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:justificationMode="inter_word"
+                        android:text="harga "
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="174dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+
+                    android:background="@color/White"
+                    android:onClick="addbarang"
+                    android:src="@drawable/calltoaction" />
+
+                <TextView
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@color/White"
+                    android:onClick="logoutAdmin"
+                    android:text="Logout" />
 
 
-        </LinearLayout>
 
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/editstore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/following"
+                        android:onClick="personalProfile"/>
+
+                    <ImageView
+                        android:id="@+id/viewstore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/follow" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rycleview"
             android:paddingBottom="50dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:clipToPadding="false"
-
             tools:itemCount="1"
             tools:listitem="@layout/produk"
             />
@@ -123,16 +170,14 @@
 
 
 
-
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/White"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
             android:id="@+id/home1"
@@ -143,14 +188,7 @@
             android:background="@color/White"
             app:srcCompat="@drawable/home" />
 
-        <ImageView
-            android:id="@+id/search1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_weight="1"
-            android:background="@color/White"
-            android:src="@drawable/search" />
+
 
 
 
@@ -173,4 +211,6 @@
             app:srcCompat="@drawable/profile" />
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+

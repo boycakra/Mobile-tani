@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Register extends AppCompatActivity {
-    EditText fullName,email,password,phone;
+    EditText fullName,email,password,phone,saldo;
     Button registerBtn,goToLogin;
     boolean valid = true;
     FirebaseAuth fAuth;
@@ -43,6 +43,7 @@ public class Register extends AppCompatActivity {
         phone = findViewById(R.id.registerPhone);
         registerBtn = findViewById(R.id.registerBtn);
         goToLogin = findViewById(R.id.gotoLogin);
+        saldo = findViewById(R.id.saldo);
 
         isFarmer = findViewById(R.id.isFarmer);
         isUserpembeli =findViewById(R.id.isUserpembeli);
@@ -75,6 +76,7 @@ public class Register extends AppCompatActivity {
                 checkField(email);
                 checkField(password);
                 checkField(phone);
+
                 //check box
                 if(!(isFarmer.isChecked()|| isUserpembeli.isChecked())){
                     Toast.makeText(Register.this, "Pilih Jenis Akun",Toast.LENGTH_SHORT).show();
@@ -93,6 +95,7 @@ public class Register extends AppCompatActivity {
                             userInfo.put("Useremail",email.getText().toString());
                             userInfo.put("Phonenumber",phone.getText().toString());
                             userInfo.put("password",password.getText().toString());
+                            userInfo.put("Saldo",saldo.getText().toString());
                             //spek
                             if(isFarmer.isChecked()){
                                 userInfo.put("isPetani","1");

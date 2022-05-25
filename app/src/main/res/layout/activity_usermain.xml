@@ -17,6 +17,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/green">
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -37,32 +38,66 @@
             android:textSize="30sp" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
             android:background="@color/green"
-            android:src="@drawable/cart"
+            android:src="@drawable/harvest"
             android:layout_marginTop="20dp"
+            android:onClick="Buah"
             android:layout_marginLeft="100dp"
             android:layout_weight="1"
             />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
             android:background="@color/green"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:src="@drawable/love" />
+            android:onClick="Sayur"
+            android:src="@drawable/sayuricon" />
 
 
     </LinearLayout>
-    <EditText
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Saldo"
-        android:textColor="@color/White"
-        />
-    <EditText
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/saldouser"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="4dp"
+            android:text="Harga "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/Rp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="4dp"
+            android:text="Rp. "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+
+            android:id="@+id/saldouserdatabase"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:justificationMode="inter_word"
+            android:text="harga "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <TextView
         android:id="@+id/usertext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -123,6 +158,7 @@
                 android:layout_width="229dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:onClick="pindah"
                 app:srcCompat="@drawable/seeall" />
 
 
@@ -132,13 +168,33 @@
             android:id="@+id/logoutBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
+           android:layout_gravity="center"
             android:text="Logout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/topup"
+            android:background="@color/white"
+            android:onClick="topup"/>
+
+        <TextView
+            android:id="@+id/TextTopUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Topup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:fontFamily="@font/mmedium"/>
     </LinearLayout>
 
 
@@ -153,8 +209,6 @@
 
 
 
-
-
         <ImageView
             android:id="@+id/store1"
             android:layout_width="match_parent"
@@ -162,7 +216,8 @@
             android:layout_marginVertical="5dp"
             android:layout_weight="1"
             android:background="@color/White"
-            app:srcCompat="@drawable/order" />
+            app:srcCompat="@drawable/order"
+            android:onClick="checkout"/>
 
         <ImageView
             android:id="@+id/order1"
@@ -184,6 +239,5 @@
             android:onClick="personalProfileuser"/>
 
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+

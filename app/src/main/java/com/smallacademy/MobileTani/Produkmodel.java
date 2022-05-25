@@ -8,7 +8,25 @@ public class Produkmodel implements Serializable {
     private String Harga;
     private String jmlhbarang;
     private String picbarang;
-    private String Jenis;
+    private String jenis;
+    private String Idpetani;
+    private String Phonenumber;
+
+    public Produkmodel(String Nama,String Deskripsi, String Harga, String jmlhbarang,String picbarang, String jenis,String Idpetani,String Phonenumber) {
+        this.Nama=Nama;
+        this.Deskripsi=Deskripsi;
+        this.Harga=Harga;
+        this.jmlhbarang=jmlhbarang;
+        this.picbarang=picbarang;
+        this.jenis= jenis;
+        this.Idpetani=Idpetani;
+        this.Phonenumber=Phonenumber;
+
+    }
+    public  Produkmodel(){
+
+    }
+
 
     public String getNama(){return Nama;}
     public void  setNama(String Nama){
@@ -32,10 +50,22 @@ public class Produkmodel implements Serializable {
     public void setJmlhbarang(String jmlhbarang){
         this.jmlhbarang = jmlhbarang;
     }
-    public  String getJenis(){
-        return Jenis;
+    public  String getjenis(){
+        return jenis;
     }
     public void setJenis(String jenis){
-        this.Jenis=  Jenis;
+        this.jenis=  jenis;
+    }
+    public  String getIdpetani(){
+        return Idpetani;
+    }
+    public void setIdpetani(String Idpetani){
+        this.Idpetani=  Idpetani;
+    }
+    public  String getPhonenumber(){
+        return Phonenumber;
+    }
+    public void setPhonenumber(String Phonenumber){
+        this.Phonenumber=  Phonenumber;
     }
 }

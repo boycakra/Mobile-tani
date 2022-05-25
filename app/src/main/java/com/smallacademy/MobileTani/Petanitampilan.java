@@ -20,6 +20,8 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.squareup.picasso.Picasso;
 
 
@@ -32,9 +34,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Petanitampilan extends AppCompatActivity {
-    private EditText FullName;
+    private TextView FullName;
     private RecyclerView produklist;
     private TextView txt_more;
+    private TextView saldo;
     private DatabaseReference mdatabase;
     private ImageView profilpic;
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -52,9 +55,9 @@ public class Petanitampilan extends AppCompatActivity {
 
 
         //query
-        Query query = db.collection("Users").document(FirebaseAuth.getInstance().getUid()).collection("Produk");
+        Query query = db.collection("Produk").whereEqualTo("idpetani",FirebaseAuth.getInstance().getUid());
 //        CollectionReference docRef =db.collection("Users").document(FirebaseAuth.getInstance().getUid()).collection("Produkmodel");
-//        docRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//        query.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
 //                    @Override
 //                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 //                        String data = "";
@@ -88,17 +91,22 @@ public class Petanitampilan extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull @NotNull Petanitampilan.produkviewHolder holder, int position, @NonNull @NotNull Produkmodel model) {
                 holder.Name.setText(model.getNama());
-                holder.jenis.setText(model.getJenis());
+                holder.jenis.setText(model.getjenis());
                 holder.Harga.setText(model.getHarga());
                 holder.jmlhbarang.setText(model.getJmlhbarang());
                 holder.Deskripsi.setText(model.getDeskripsi());
-                Picasso.get().load(model.getPicbarang()).into(holder.picbarang);
+                try {
+                    Picasso.get().load(model.getPicbarang()).into(holder.picbarang);
+                }
+                catch (Exception e ){
+
+                }
                 Log.i("Rizal",model.getNama());
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(v.getContext(), petaniprodukinfo.class);
-                        intent.putExtra("Jenis",model.getJenis());
+                        intent.putExtra("Jenis",model.getjenis());
                         intent.putExtra("Nama",model.getNama());
                         intent.putExtra("picbarang",model.getPicbarang());
                         intent.putExtra("Deskripsi",model.getDeskripsi());
@@ -124,6 +132,7 @@ public class Petanitampilan extends AppCompatActivity {
         setProfilpic();
 
         profilpic = findViewById(R.id.profilegambar);
+        saldo = findViewById(R.id.saldodatabase);
 
         produklist.setHasFixedSize(true);
         produklist.setLayoutManager(new LinearLayoutManager(this));
@@ -160,6 +169,9 @@ public class Petanitampilan extends AppCompatActivity {
                 }
                 if(user.getMore() != null){
                     txt_more.setText(user.getMore());
+                }
+                if(user.getSaldo() != null){
+                    saldo.setText(user.getSaldo());
                 }
             }
         });

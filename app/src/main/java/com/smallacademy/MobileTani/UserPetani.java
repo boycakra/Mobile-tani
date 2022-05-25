@@ -11,6 +11,7 @@ public class UserPetani implements Serializable {
     private String Phonenumber;
     private String Housephone;
     private String picprofil;
+    private String Saldo;
 
 
     public UserPetani(){}
@@ -40,8 +41,8 @@ public class UserPetani implements Serializable {
         this.Useremail = useremail;
     }
 
-    public void setPhonenumber(String phonenumber) {
-        this.Phonenumber = phonenumber;
+    public void setPhonenumber(String Phonenumber) {
+        this.Phonenumber = Phonenumber;
     }
 
     public String getPassword() {
@@ -81,6 +82,13 @@ public class UserPetani implements Serializable {
     }
     public void setPicprofil(String picprofil){
         this.picprofil=  picprofil;
+    }
+
+    public  String getSaldo(){
+        return Saldo;
+    }
+    public void setSaldo(String Saldo){
+        this.Saldo=  Saldo;
     }
 
 

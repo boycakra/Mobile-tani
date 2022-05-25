@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserRoles.iml" filepath="$PROJECT_DIR$/.idea/modules/UserRoles.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/UserRoles.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/UserRoles.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mobile-Tani.iml" filepath="$PROJECT_DIR$/.idea/modules/Mobile-Tani.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Mobile-Tani.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Mobile-Tani.app.iml" />
     </modules>
   </component>
 </project>

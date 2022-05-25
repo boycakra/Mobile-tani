@@ -35,9 +35,18 @@
             android:paddingTop="10dp"
             android:text="all Produk"
             android:textAlignment="center"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/white"
             android:textSize="30sp" />
 
     </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rycleview1"
+        android:paddingBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        tools:itemCount="1"
+        tools:listitem="@layout/produk"
+        />
 
 </LinearLayout>

@@ -91,6 +91,10 @@ public class Login extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), Usertampilan.class));
                     finish();
                 }
+                if(documentSnapshot.getString("isAdmin")!=null){
+                    startActivity(new Intent(getApplicationContext(), Usertampilan.class));
+                    finish();
+                }
             }
         });
     }
